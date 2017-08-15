@@ -14,7 +14,7 @@ var values = process.argv.slice(2)
 knex.insert({first_name: values[0], last_name: values[1], birthdate: values[2]})
 .into('famous_people')
 .then(function() {
- return {inserted: true};
+ console.log({inserted: true});
  console.log("ADDED");
   knex.destroy();
 })
