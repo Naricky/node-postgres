@@ -2,9 +2,10 @@
 exports.up = function(knex, Promise) {
  return Promise.all([
    knex.schema.createTable('milestones', function(table){
-     table.integer('id');
+     table.integer('id')
      table.string('description');
      table.date('date_achieved');
+     table.integer('famous_people_id').references('famous_people.id')
 
    })
  ])
