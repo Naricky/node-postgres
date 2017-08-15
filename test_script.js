@@ -23,4 +23,3 @@ client.connect((err) => {
   });
 });
 
-console.log("Testing")
